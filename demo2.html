@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.title{
+				width:1200px;
+				margin: 0 auto;
+			}
+			.title div{
+				text-align: center;
+			}
+			#word a{
+			   text-decoration: none;
+			   height: 40px;
+			   width: 200px;
+			   font-size: 40px;
+			   animation: colorer 1s linear infinite;
+			}
+			@keyframes colorer{
+				from{color: green;}
+				to{color: red;}
+			}
+			#img{
+				display: none;
+			}
+		</style>
+	</head>
+	<body><!--onload="loop()"-->
+		<div class="title">
+		<div id="word"><a href="#" onclick="loop(),change()">点击有惊喜</a></div>
+		<div id="img" ><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506481032&di=8a417b627e9ba444869861543e068adb&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161011%2Fbb0748a8c3764615b54297a0f80356cb.gif" /> </div>
+		</div>
+		<script>
+			function loop(){
+				var str=prompt("说你最帅");
+				var num=1;
+				while(str!="你最帅"){
+					
+					switch(num){
+						case 1:
+						
+						str=prompt("答错了，再来一次！说你最帅");
+						num++;
+						break;
+						case 2:
+						str=prompt("不对不对，再来一次！说你最帅");
+						num++;
+						break;
+						case 3:
+						str=prompt("走心啊，再来一次！说你最帅");
+						num++;
+						break;
+						case 4:
+						str=prompt("太失望了，再来一次！说你最帅");
+						num++;
+						break;	
+					}
+					if(num==5){
+						num=1;
+					}
+					
+				}
+			}
+			function change(){
+				var a=document.getElementById("word");
+				var im=document.getElementById("img");
+				a.style.display="none";
+				im.style.display="block";
+			}
+		</script>
+	</body>
+</html>
