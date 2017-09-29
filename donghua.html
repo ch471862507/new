@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div img{
+				width: 300px;
+				height: 200px;
+				border: 10px solid white;
+			}
+			div{
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			div img:first-child{
+				position: absolute;
+				left: 120px;
+				transform: rotate(-30deg);
+			}
+			div img:nth-child(2){
+				position: absolute;
+				left: 400px;
+				top:300px;
+				transform: rotate(-15deg);
+				
+			}
+			div img:nth-child(3){
+				position: absolute;
+				left: 120px;
+				top:200px;
+				transform: rotate(30deg);
+			}
+			div img:nth-child(4){
+				position:absolute;
+				left: 400px;
+				top:50px;
+				transform: rotate(20deg);
+			}
+			div img:nth-child(5){
+				position: absolute;
+				left: 600px;
+				top:50px;
+				transform: rotate(30deg);
+				
+			}
+			div img:nth-child(6){
+				position: absolute;
+				left: 800px;
+				top:80px;
+				transform: rotate(60deg);
+				
+			}
+			div img:nth-child(7){
+				position: absolute;
+				left: 700px;
+				top:400px;
+				transform: rotate(-30deg);
+				
+			}
+			div img:nth-child(8){
+				position: absolute;
+				left: 900px;
+				top:100px;
+				transform: rotate(45deg);
+			}
+			div img:nth-child(9){
+				animation: spread 5s linear infinite;
+			}
+			div img:nth-child(10){
+				animation: spread 10s linear infinite;
+			}
+			@keyframes spread{
+				0%{
+					transform:translate(0,0) ;
+				}
+				25%{
+					transform: translate(0,450px);
+				}
+				50%{
+					transform: translate(450px,450px);
+				}
+				75%{
+					transform: translate(450px,0);
+				}
+				100%{
+					transform: translate(0,0);
+				}
+			}
+			div img:hover{
+				z-index: 1;
+				transform: rotate(300deg) scale(1.5);
+				transition: all 5s;
+				animation-play-state: paused;
+			
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<img src="img/1.jpg" />
+		<img src="img/10.jpg" />
+		<img src="img/2.jpg" />
+		<img src="img/3.jpg" />
+		<img src="img/4.jpg" />
+		<img src="img/5.jpg" />
+		<img src="img/6.jpg"  />
+		<img src="img/7.jpg" />
+		<img src="img/8.jpg" />
+		<img src="img/9.jpg" /> 
+		</div>
+	</body>
+</html>
